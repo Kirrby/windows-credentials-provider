@@ -18,6 +18,14 @@ Better yet, use a VM to do your experiments.
 
 _Consider yourself warned._
 
+## Features
+- **Basic credential provider functionality** implemented in pure C#
+- **HeartMonitor integration** for phone-based unlocking functionality
+  - Dynamically shows/hides "Phone Unlock" option based on phone status
+  - Reads state from `C:\ProgramData\HeartMonitor\state.json`
+  - Polls state file every 5 seconds for updates
+  - Validates phone status before allowing unlock
+
 ## Installation
 To start a setup to develop your own Windows Credential Provider:
 - Install the COM component by building the project
@@ -29,6 +37,8 @@ When you run TestConsoleApp you should be able to see your provider under "more 
 
 ## What it can do
 It connects the logon procedure with alternative means to logon, like images from cameras, voices with microphone.
+
+With the HeartMonitor integration, it can also allow phone-based unlocking when your phone is detected as being nearby.
 
 ## More info
 I have included the official doc on how to use the credential provider - note that you have to have some knowledge about COM and the examples are in C++.

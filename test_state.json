@@ -1,0 +1,1 @@
+{"version": 1, "last_update_utc": "2025-11-16T08:12:34Z", "primary_device_id": "device-123456", "allow_unlock": true, "devices": {"device-123456": {"online": true, "last_seen_utc": "2025-11-16T08:12:30Z", "battery": 0.83}}}

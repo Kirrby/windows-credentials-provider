@@ -1,0 +1,7 @@
+Files required for HeartMonitor Credential Provider Installation:
+
+1. WindowsCredentialProviderTest.dll - Main credential provider
+2. install.bat - Installation script
+3. uninstall.bat - Uninstallation script
+4. config.xml - Configuration file
+5. README.txt - Documentation

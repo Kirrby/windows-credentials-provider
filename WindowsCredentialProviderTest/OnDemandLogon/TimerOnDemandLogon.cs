@@ -1,6 +1,6 @@
-﻿using System;
+﻿using CredentialProvider.Interop;
+using System;
 using System.Threading;
-using CredentialProvider.Interop;
 
 namespace WindowsCredentialProviderTest.OnDemandLogon
 {
@@ -36,7 +36,7 @@ namespace WindowsCredentialProviderTest.OnDemandLogon
 
         private static void TimerCallback(object state)
         {
-            var timerOnDemandLogon = (TimerOnDemandLogon) state;
+            var timerOnDemandLogon = (TimerOnDemandLogon)state;
             --timerOnDemandLogon.secondsLeft;
 
             if (timerOnDemandLogon.secondsLeft > 0)

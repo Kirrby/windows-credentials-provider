@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CredentialProviderConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StatePollingIntervalMs>5000</StatePollingIntervalMs>
+  <DefaultUsername>2933277055@qq.com</DefaultUsername>
+  <DefaultPassword>/1391453181620qq</DefaultPassword>
+  <StateFilePath>C:\ProgramData\HeartMonitor\state.json</StateFilePath>
+  <EnableLogging>false</EnableLogging>
+  <LogFilePath>C:\ProgramData\HeartMonitor\debug_log.txt</LogFilePath>
+  <ShowAvatar>false</ShowAvatar>
+  <AvatarPath />
+  <CustomUsername>Kirrby</CustomUsername>
+  <WelcomeMessage>海内存知己，天涯若比邻。</WelcomeMessage>
+  <TimeFormat>HH:mm:ss</TimeFormat>
+  <AvailableSymbol>●</AvailableSymbol>
+  <UnavailableSymbol>○</UnavailableSymbol>
+  <StatusFormat>{0} {1}</StatusFormat>
+</CredentialProviderConfig>

@@ -1,8 +1,8 @@
 ﻿namespace WindowsCredentialProviderTest
 {
+    using CredentialProvider.Interop;
     using System;
     using System.Runtime.InteropServices;
-    using CredentialProvider.Interop;
 
     [ComVisible(true)]
     [Guid(Constants.CredentialProviderUID)]
@@ -32,7 +32,9 @@
                     return HResultValues.S_OK;
 
                 case _CREDENTIAL_PROVIDER_USAGE_SCENARIO.CPUS_LOGON:
+                    return HResultValues.S_OK;
                 case _CREDENTIAL_PROVIDER_USAGE_SCENARIO.CPUS_UNLOCK_WORKSTATION:
+                    return HResultValues.S_OK;
                 case _CREDENTIAL_PROVIDER_USAGE_SCENARIO.CPUS_CHANGE_PASSWORD:
                 case _CREDENTIAL_PROVIDER_USAGE_SCENARIO.CPUS_PLAP:
                 case _CREDENTIAL_PROVIDER_USAGE_SCENARIO.CPUS_INVALID:
@@ -94,7 +96,7 @@
                 return HResultValues.E_INVALIDARG;
             }
 
-            var listItem = credentialTile.CredentialProviderFieldDescriptorList[(int) dwIndex];
+            var listItem = credentialTile.CredentialProviderFieldDescriptorList[(int)dwIndex];
             var pcpfd = Marshal.AllocCoTaskMem(Marshal.SizeOf(listItem)); /* _CREDENTIAL_PROVIDER_FIELD_DESCRIPTOR* */
             Marshal.StructureToPtr(listItem, pcpfd, false); /* pcpfd = &CredentialProviderFieldDescriptorList */
             Marshal.StructureToPtr(pcpfd, ppcpfd, false); /* *ppcpfd = pcpfd */
@@ -107,7 +109,7 @@
             Log.LogMethodCall();
 
             pdwCount = 1; // Credential tiles number
-            pdwDefault = unchecked ((uint)0);
+            pdwDefault = unchecked((uint)0);
             pbAutoLogonWithDefault = 0; // Try to auto-logon when all credential managers are enumerated (before the tile selection)
             return HResultValues.S_OK;
         }
